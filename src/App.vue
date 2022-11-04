@@ -5,7 +5,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <Header msg="This is my daisyUI playground :-)" />
-  <div class="container flex justify-between">
+  <div class="flex justify-around">
     <div data-theme="light" class="m-4 p-4">
       This div will always use light theme
       <span data-theme="dark">This span will always use dark theme!</span>
