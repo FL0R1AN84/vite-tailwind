@@ -9,7 +9,7 @@ const count = ref(0);
 </script>
 
 <template>
-  <div class="navbar bg-base-100">
+  <div class="navbar bg-base-200 shadow">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl">{{ msg }}</a>
     </div>
