@@ -1,6 +1,7 @@
 <script setup>
   import { ref } from "vue";
   import Smartphone from "./composables/Smartphone.vue";
+  import CardVue from "./composables/Card.vue";
 
   const changetext = ref(true);
 </script>
@@ -52,6 +53,10 @@
         <div class="swap-off">😇</div>
       </label>
     </div>
+  </div>
+
+  <div class="flex justify-center m-4">
+    <CardVue />
   </div>
 </template>
 
