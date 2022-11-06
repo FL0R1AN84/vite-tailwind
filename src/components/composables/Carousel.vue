@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="w-64 carousel rounded-box">
+  <div class="w-fit h-full carousel rounded-box">
     <div class="carousel-item w-full">
       <img
         src="https://placeimg.com/256/400/arch"

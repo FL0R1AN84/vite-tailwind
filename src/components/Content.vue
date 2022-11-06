@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from "vue";
-  import Smartphone from "./composable/Smartphone.vue";
+  import Smartphone from "./composables/Smartphone.vue";
 
   const changetext = ref(true);
 </script>
