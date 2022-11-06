@@ -12,7 +12,7 @@
     <div class="display">
       <div v-if="!vertical" class="artboard artboard-demo phone-1">
         <CarouselVue />
-        <div>
+        <div class="animate-bounce">
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
       </div>
       <div v-if="vertical" class="artboard artboard-demo phone-1">
         <CarouselVerticalVue />
-        <div>
+        <div class="animate-bounce">
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8 rotate-90"
             xmlns="http://www.w3.org/2000/svg"
