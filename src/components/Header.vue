@@ -9,11 +9,12 @@
 
   defineProps({
     msg: String,
+    theme: String,
   });
 </script>
 
 <template>
-  <div class="navbar bg-base-200 shadow">
+  <div :data-theme="theme" class="navbar bg-base-200 shadow">
     <div v-if="count < 10" class="flex-1">
       <a @click="count++" class="btn btn-ghost normal-case text-xl">{{
         msg
@@ -22,9 +23,7 @@
     <div v-if="count >= 10" class="flex-1">
       <a @click="error" class="btn btn-ghost normal-case text-xl">{{ msg }}</a>
     </div>
-    <div class="flex-none mx-2 invisible md:visible">
-      <input type="checkbox" class="toggle" checked />
-    </div>
+    <div class="flex-none mx-2 invisible md:visible"></div>
     <div class="flex-none invisible sm:visible">
       <button class="btn btn-square btn-ghost">
         <label class="swap swap-rotate">
@@ -33,6 +32,7 @@
 
           <!-- sun icon -->
           <svg
+            @click="theme = 'light'"
             class="swap-on fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -44,6 +44,7 @@
 
           <!-- moon icon -->
           <svg
+            @click="theme = 'dark'"
             class="swap-off fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
