@@ -1,13 +1,26 @@
 <script setup>
-defineProps({
-  msg: String,
-});
+  import { ref } from "vue";
+  import { useToast } from "vue-toastification";
+
+  const toast = useToast();
+  const error = () => toast.error("Don´t push me so hard!");
+
+  const count = ref(0);
+
+  defineProps({
+    msg: String,
+  });
 </script>
 
 <template>
   <div class="navbar bg-base-200 shadow">
-    <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl">{{ msg }}</a>
+    <div v-if="count < 10" class="flex-1">
+      <a @click="count++" class="btn btn-ghost normal-case text-xl">{{
+        msg
+      }}</a>
+    </div>
+    <div v-if="count >= 10" class="flex-1">
+      <a @click="error" class="btn btn-ghost normal-case text-xl">{{ msg }}</a>
     </div>
     <div class="flex-none mx-2">
       <input type="checkbox" class="toggle" checked />
@@ -45,5 +58,4 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
