@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+  import { useToast } from "vue-toastification";
+
+  const toast = useToast();
+  const success = () => toast.success("You did it! 🎉");
+</script>
 
 <template>
   <div
@@ -13,7 +18,7 @@
         <h2 class="card-title">Transparent</h2>
         <p>Lorem ipsum and more example text</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">Push me!</button>
+          <button @click="success" class="btn btn-primary">Push me!</button>
         </div>
       </div>
     </div>
