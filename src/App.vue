@@ -7,7 +7,7 @@
 <template>
   <Header msg="This is my daisyUI playground :-)" theme="dark" />
   <Content />
-  <Footer msg="I´m the Footer" />
+  <Footer msg="Copyright © 2022 - All right reserved" />
 </template>
 
 <style scoped></style>
