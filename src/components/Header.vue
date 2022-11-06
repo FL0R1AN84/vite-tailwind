@@ -22,10 +22,10 @@
     <div v-if="count >= 10" class="flex-1">
       <a @click="error" class="btn btn-ghost normal-case text-xl">{{ msg }}</a>
     </div>
-    <div class="flex-none mx-2">
+    <div class="flex-none mx-2 invisible md:visible">
       <input type="checkbox" class="toggle" checked />
     </div>
-    <div class="flex-none">
+    <div class="flex-none invisible sm:visible">
       <button class="btn btn-square btn-ghost">
         <label class="swap swap-rotate">
           <!-- this hidden checkbox controls the state -->
