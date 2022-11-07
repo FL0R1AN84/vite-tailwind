@@ -58,7 +58,7 @@
 
   <div class="flex justify-center m-4">
     <CardVue />
-    <Skeleton />
+    <Skeleton height="h-[216px]" />
   </div>
 </template>
 

@@ -3,6 +3,10 @@
 
   const toast = useToast();
   const success = () => toast.success("You did it! 🎉");
+
+  defineProps({
+    height: String,
+  });
 </script>
 
 <template>
@@ -10,7 +14,8 @@
     <div class="card w-96 rounded-2xl">
       <div
         role="status"
-        class="flex justify-center items-center rounded-t-2xl h-[216px] bg-gray-300 animate-pulse dark:bg-gray-700"
+        class="flex justify-center items-center rounded-t-2xl bg-gray-300 animate-pulse dark:bg-gray-700"
+        :class="height"
       >
         <svg
           class="w-12 h-12 text-gray-200 dark:text-gray-600"
