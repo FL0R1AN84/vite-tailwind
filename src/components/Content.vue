@@ -57,8 +57,14 @@
   </div>
 
   <div class="flex justify-center m-4">
-    <CardVue />
-    <Skeleton height="h-[216px]" />
+    <Suspense>
+      <template #default>
+        <CardVue />
+      </template>
+      <template #fallback>
+        <Skeleton />
+      </template>
+    </Suspense>
   </div>
 </template>
 
