@@ -3,6 +3,8 @@
 
   const toast = useToast();
   const success = () => toast.success("You did it! 🎉");
+
+  await new Promise((res) => setTimeout(res, 2000));
 </script>
 
 <template>
