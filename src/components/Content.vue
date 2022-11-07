@@ -2,6 +2,7 @@
   import { ref } from "vue";
   import Smartphone from "./composables/Smartphone.vue";
   import CardVue from "./composables/Card.vue";
+  import Skeleton from "./composables/Skeleton.vue";
 
   const changetext = ref(true);
 </script>
@@ -57,6 +58,7 @@
 
   <div class="flex justify-center m-4">
     <CardVue />
+    <Skeleton />
   </div>
 </template>
 
