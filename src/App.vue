@@ -1,20 +1,19 @@
 <script setup>
-  import { ref } from "vue";
-  import { Modal } from "flowbite-vue";
-  import Header from "./components/Header.vue";
-  // import Footer from "./components/Footer.vue";
+import { ref } from "vue";
+import { Modal } from "flowbite-vue";
+import Header from "./components/Header.vue";
+// import Footer from "./components/Footer.vue";
 
-  const count = ref(0);
+const count = ref(0);
 
-  const isShowModal = ref(false);
-  function closeModal() {
-    isShowModal.value = false;
-  }
-  function showModal() {
-    isShowModal.value = true;
-  }
+const isShowModal = ref(false);
+function closeModal() {
+  isShowModal.value = false;
+}
+function showModal() {
+  isShowModal.value = true;
+}
 </script>
-
 <template>
   <div class="p-2">
     <button
